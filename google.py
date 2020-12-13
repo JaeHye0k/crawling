@@ -57,7 +57,6 @@ def web_crawling(keyword_list,break_count = 0):
 
 
 if __name__ == '__main__':
-    keyword_list = ["워너원 강다니엘", "엑소 백현", "박보검", "송중기", "워너원 황민현", "엑소 시우민", "강동원", "이종석", "이준기", "마동석", "조진웅", "조세호",
-                    "안재홍", "윤두준", "이민기", "김우빈", "육성재", "공유", "방탄소년단 정국", "아이콘 바비", "워너원 박지훈", "엑소 수호"]
+    keyword_list = [""] # 이곳에 크롤링 할 키워드를 적음
     break_count = int(input('사진을 몇장 다운로드 받으시겠습니까?: '))
     web_crawling(keyword_list,break_count)
