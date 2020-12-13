@@ -18,7 +18,21 @@ def web_crawling(keyword_list,break_count = 0):
         # Get scroll height (scroll down with infinite loading)
         last_height = driver.execute_script("return document.body.scrollHeight") # 브라우저의 높이
 
-
+        # while True:
+        #     # Scroll down to bottom
+        #     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);") # 브라우저 끝까지 스크롤을 내림
+        #
+        #     # Wait to load page
+        #     time.sleep(SCROLL_PAUSE_TIME) # 로딩을 기다림
+        #
+        #     # Calculate new scroll height and compare with last scroll height
+        #     new_height = driver.execute_script("return document.body.scrollHeight")
+        #     if new_height == last_height: # 스크롤을 내렸을때 나오는게 없으니까 높이가 같음
+        #         try:
+        #             driver.find_element_by_class_name("mye4qd").click() # 결과 더보기 클릭
+        #         except:
+        #             break
+        #     last_height = new_height
 
         images = driver.find_elements_by_css_selector(".rg_i.Q4LuWd") # 이미지 리스트
         count = 1
